@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: dim_patients
+    description: "Transformed patient data with standardized data types."
+
+    columns:
+      - name: patient_id
+        data_type: varchar(20)
+
+      - name: first_name
+        data_type: varchar(200)
+
+      - name: last_name
+        data_type: varchar(200)
+
+      - name: date_of_birth
+        data_type: date
+
+      - name: phone
+        data_type: varchar(30)
+
+      - name: zip
+        data_type: varchar(15)
+
+      - name: created_date
+        data_type: date
+
+  - name: dim_providers
+    description: "Transformed provider data with standardized data types and cleaned text fields."
+
+    columns:
+      - name: provider_id
+        data_type: varchar(20)
+        data_tests:
+          - not_null
+
+      - name: npi
+        data_type: varchar(10)
+
+      - name: first_name
+        data_type: varchar(200)
+
+      - name: last_name
+        data_type: varchar(200)
+
+      - name: specialty
+        data_type: varchar(100)
+
+      - name: role
+        data_type: varchar(50)
+
+      - name: effective_date
+        data_type: date
+
+      - name: location
+        data_type: varchar(100)

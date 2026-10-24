@@ -1,0 +1,76 @@
+[0m00:28:43.587541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219244F3FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192B003BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192B003530>]}
+
+
+============================== 00:28:43.772198 | 4e8554e2-a79a-4fc0-99f7-3d77401703d6 ==============================
+[0m00:28:43.772198 [info ] [MainThread]: Running with dbt=1.12.6
+[0m00:28:43.773191 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\AAACHARAN\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m00:29:57.606174 [debug] [MainThread]: Starter project path: D:\Clustrex-Project\.venv\Lib\site-packages\dbt\include\starter_project
+[0m00:29:57.644046 [info ] [MainThread]: Setting up your profile.
+[0m00:34:02.769650 [info ] [MainThread]: Profile dbt_workspace written to C:\Users\AAACHARAN\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m00:34:02.808673 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m00:34:02.814580 [info ] [MainThread]: dbt version: 1.12.6
+[0m00:34:02.814580 [info ] [MainThread]: python version: 3.12.12
+[0m00:34:02.814580 [info ] [MainThread]: python path: D:\Clustrex-Project\.venv\Scripts\python.exe
+[0m00:34:02.817512 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:34:02.859411 [info ] [MainThread]: Using profiles dir at C:\Users\AAACHARAN\.dbt
+[0m00:34:02.859411 [info ] [MainThread]: Using profiles.yml file at C:\Users\AAACHARAN\.dbt\profiles.yml
+[0m00:34:02.873677 [info ] [MainThread]: Using dbt_project.yml file at D:\Clustrex-Project\dbt_workspace\dbt_project.yml
+[0m00:34:02.875453 [info ] [MainThread]: adapter type: postgres
+[0m00:34:02.875453 [info ] [MainThread]: adapter version: 1.11.0
+[0m00:34:03.000667 [info ] [MainThread]: Configuration:
+[0m00:34:03.001571 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:34:03.001571 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:34:03.002682 [info ] [MainThread]: Required dependencies:
+[0m00:34:03.002682 [debug] [MainThread]: Executing "git --help"
+[0m00:34:03.066157 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:34:03.066157 [debug] [MainThread]: STDERR: "b''"
+[0m00:34:03.066157 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:34:03.066157 [info ] [MainThread]: Connection:
+[0m00:34:03.066157 [info ] [MainThread]:   host: localhost
+[0m00:34:03.066157 [info ] [MainThread]:   port: 5432
+[0m00:34:03.066157 [info ] [MainThread]:   user: admin
+[0m00:34:03.066157 [info ] [MainThread]:   database: warehouse
+[0m00:34:03.066157 [info ] [MainThread]:   schema: public
+[0m00:34:03.066157 [info ] [MainThread]:   connect_timeout: 10
+[0m00:34:03.070755 [info ] [MainThread]:   role: None
+[0m00:34:03.070755 [info ] [MainThread]:   search_path: None
+[0m00:34:03.070755 [info ] [MainThread]:   keepalives_idle: 0
+[0m00:34:03.070755 [info ] [MainThread]:   sslmode: None
+[0m00:34:03.072222 [info ] [MainThread]:   sslcert: None
+[0m00:34:03.072222 [info ] [MainThread]:   sslkey: None
+[0m00:34:03.072222 [info ] [MainThread]:   sslrootcert: None
+[0m00:34:03.073228 [info ] [MainThread]:   application_name: dbt
+[0m00:34:03.073228 [info ] [MainThread]:   autocommit: False
+[0m00:34:03.074495 [info ] [MainThread]:   retries: 1
+[0m00:34:03.075283 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m00:34:03.367243 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m00:34:06.236487 [debug] [MainThread]: Using postgres connection "debug"
+[0m00:34:06.236487 [debug] [MainThread]: On debug: select 1 as id
+[0m00:34:06.236487 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:34:06.414404 [debug] [MainThread]: SQL status: SELECT 1 in 0.179 seconds
+[0m00:34:06.418799 [debug] [MainThread]: On debug: Close
+[0m00:34:06.418799 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:34:06.418799 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:34:06.418799 [info ] [MainThread]: Your new dbt project "dbt_workspace" was created!
+Initialized new project in D:\Clustrex-Project\dbt_workspace\dbt_workspace
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:34:06.422096 [debug] [MainThread]: Command `dbt init` succeeded at 00:34:06.422096 after 323.07 seconds
+[0m00:34:06.422096 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:34:06.422096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002192998B800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219244F3FE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021928E8E210>]}
+[0m00:34:06.422096 [debug] [MainThread]: Flushing usage events
+[0m00:34:07.530079 [debug] [MainThread]: An error was encountered while trying to flush usage events

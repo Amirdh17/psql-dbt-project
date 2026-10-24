@@ -1,0 +1,49 @@
+provider_id,npi,first_name,last_name,specialty,role,effective_date,location
+P009,1848018451,Ravi,Bennett,Retina,Partner,2024-01-01,Downtown
+P035,1868501429,Claire,Fernandez,Optometry,Optometrist,2024-01-01,Downtown
+P012,1154303911,Tessa,Adler,Retina,Partner,2026-03-01,Westside
+P011,1252880957,Sofia,Schmidt,Cornea,Associate,2024-01-01,North Clinic
+P012,1154303911,Tessa,Adler,Retina,Associate,2024-01-01,Westside
+P017,1376311656,Aarav,Hughes,General Ophthalmology,Partner,2024-01-01,Westside
+P030,1868011280,Elena,Iyer,Glaucoma,Partner,2024-01-01,Downtown
+P018,1106513338,Daniel,Dubois,Oculoplastics,Associate,2024-01-01,Westside
+P027,1784980841,Peter,Iyer,Cornea,Associate,2024-01-01,South Clinic
+P004,1341928327,Ravi,Adler,Glaucoma,Partner,2024-01-01,Westside
+PRV-0003,1413164752,Dr. Aarav,Iyer,Retina,Associate,2024-01-01,Downtown
+P034,1330365414,Aarav,Okafor,Cornea,Partner,2024-01-01,Downtown
+P029,1401640052,Owen,Castillo,General Ophthalmology,Partner,2024-01-01,Downtown
+P023,1081219136,Aarav,Moreau,General Ophthalmology,Associate,2024-01-01,North Clinic
+P026,1183842513,Ravi,Schmidt,Oculoplastics,Associate,2024-01-01,Downtown
+P001,1116155940,Peter,Dubois,Glaucoma,Partner,2024-01-01,Westside
+P005,1483503056,Grace,Nguyen,Cornea,Associate,2024-01-01,Downtown
+P008,1101226916,Priya,Brooks,Cornea,Partner,2024-01-01,Westside
+P024,1990916998,Julian,Dubois,General Ophthalmology,Associate,2024-01-01,Downtown
+P031,1620450533,Leah,Walker,General Ophthalmology,Associate,2024-01-01,North Clinic
+P036,1965569816,Marcus,Patel,Retina,Associate,2024-01-01,Riverside
+P007,1884969653,Elena,Castillo,Glaucoma,Associate,2024-01-01,South Clinic
+PRV-0015,1098393010,O.,Sato,Retina,Partner,2024-01-01,South Clinic
+P021,1064746872,Hector,Rossi,General Ophthalmology,Associate,2024-01-01,South Clinic
+P014,1346578713,Amara,Johnson,Optometry,Optometrist,2024-01-01,South Clinic
+P037,1060883561,Sofia,Bennett,Glaucoma,Partner,2024-01-01,Downtown
+PRV-0009,1848018451,Ravi,BENNETT,Retina,Partner,2024-01-01,Downtown
+P025,1534624751,Elena,Patel,Cornea,Associate,2024-01-01,North Clinic
+P028,1182449353,Sofia,Adler,Cornea,Associate,2024-01-01,Downtown
+P038,1148465648,Victor,Castillo,General Ophthalmology,Partner,2024-01-01,South Clinic
+P032,1923226025,Amara,Patel,Cornea,Partner,2024-01-01,Westside
+P039,1629946804,Priya,Adler,Glaucoma,Partner,2024-01-01,Downtown
+P003,1413164752,Aarav,Iyer,Retina,Associate,2024-01-01,Downtown
+P002,1618495931,Daniel,Bennett,Cornea,Associate,2024-01-01,North Clinic
+P010,1270482814,Daniel,Iyer,Glaucoma,Partner,2024-01-01,Riverside
+P013,1278248963,Daniel,Ramirez,Retina,Associate,2024-01-01,Riverside
+P015,1098393010,Owen,Sato,Retina,Partner,2024-01-01,South Clinic
+P020,1326773602,Elena,Adler,Retina,Associate,2024-01-01,Westside
+P016,1518347382,Aarav,Sato,Retina,Associate,2024-01-01,Riverside
+PRV-0027,1784980841,peter,iyer,Cornea,Associate,2024-01-01,South Clinic
+P022,1098050097,Amara,Fernandez,Cornea,Associate,2024-01-01,Riverside
+P040,1995777387,Elena,Chen,Glaucoma,Partner,2024-01-01,South Clinic
+P005,1483503056,Grace,Nguyen,Cornea,Partner,2026-03-01,Downtown
+PRV-0033,1342160733 ,Grace,Johnson MD,Optometry,Optometrist,2024-01-01,Westside
+P033,1342160733,Grace,Johnson,Optometry,Optometrist,2024-01-01,Westside
+P019,1247317810,Elena,Brooks,Glaucoma,Partner,2024-01-01,Riverside
+P006,1395376724,Samuel,Kim,Retina,Associate,2024-01-01,South Clinic
+P021,1064746872,Hector,Rossi,General Ophthalmology,Partner,2026-03-01,South Clinic

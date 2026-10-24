@@ -1,0 +1,12 @@
+dbt_workspace:
+  outputs:
+    dev:
+      dbname: warehouse
+      host: localhost
+      password: project123
+      port: 5432
+      schema: stage
+      threads: 1
+      type: postgres
+      user: admin
+  target: dev

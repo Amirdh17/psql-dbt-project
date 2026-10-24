@@ -1,0 +1,11 @@
+version: 2  # Optional in dbt v1.5+
+
+sources:
+  - name: source         # Logical name used inside dbt
+    database: warehouse            # Optional: Your physical warehouse database name
+    schema: stage        # Your physical warehouse schema name
+    tables:
+      - name: patients
+      - name: referrals          
+      - name: appointments
+      - name: providers

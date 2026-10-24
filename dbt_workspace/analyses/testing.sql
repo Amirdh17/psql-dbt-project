@@ -1,0 +1,2 @@
+SELECT * 
+FROM stage.patients
