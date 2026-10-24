@@ -9,24 +9,18 @@ WITH source AS (
         NULLIF(TRIM(zip), '') AS zip,
         NULLIF(TRIM(created_date), '') AS created_date
 
-    FROM {{ source('stage', 'patients') }}
-
-),
-
-transformed AS (
-
-    SELECT
-        patient_id,
-        first_name,
-        last_name,
-        {{ standardize_date('date_of_birth') }} AS date_of_birth,
-        phone,
-        zip,
-        {{ standardize_date('created_date') }} AS created_date
-
-    FROM source
+    FROM {{ source('source', 'patients') }}
 
 )
 
-SELECT *
-FROM transformed
+SELECT DISTINCT
+    patient_id,
+    first_name,
+    last_name,
+    {{ standardize_date('date_of_birth') }} AS date_of_birth,
+    phone,
+    zip,
+    {{ standardize_date('created_date') }} AS created_date
+
+FROM source
+WHERE patient_id IS NOT NULL

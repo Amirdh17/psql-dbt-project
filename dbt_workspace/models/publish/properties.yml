@@ -1,0 +1,134 @@
+version: 2
+
+models:
+  - name: pub_fact_appointments
+    description: "Incremental publish model containing transformed appointment data. New and updated records are merged using appointment_id."
+
+    columns:
+      - name: appointment_id
+        description: "Unique identifier assigned to an appointment."
+        data_type: varchar(20)
+        data_tests:
+          - not_null
+
+      - name: patient_id
+        description: "Identifier of the patient associated with the appointment."
+        data_type: varchar(20)
+
+      - name: provider_id
+        description: "Identifier of the provider associated with the appointment."
+        data_type: varchar(20)
+
+      - name: appointment_date
+        description: "Date on which the appointment is scheduled."
+        data_type: date
+
+      - name: status
+        description: "Current status of the appointment."
+        data_type: varchar(30)
+
+      - name: updated_at
+        description: "Timestamp indicating when the appointment record was last updated."
+        data_type: timestamp
+
+  - name: pub_fact_referrals
+    description: "Incremental publish model containing referral events. New referral records are identified using referral_id."
+
+    columns:
+      - name: referral_id
+        description: "Unique identifier assigned to each referral event."
+        data_type: varchar(20)
+        data_tests:
+          - not_null
+          - unique
+
+      - name: patient_id
+        description: "Identifier of the patient associated with the referral."
+        data_type: varchar(20)
+        data_tests:
+          - not_null
+
+      - name: referring_provider_id
+        description: "Identifier of the provider initiating the referral."
+        data_type: varchar(20)
+
+      - name: receiving_provider_id
+        description: "Identifier of the provider receiving the referral."
+        data_type: varchar(20)
+
+      - name: referral_date
+        description: "Date on which the referral was made."
+        data_type: date
+
+  - name: pub_dim_patients
+    description: "Publish-layer table containing cleaned and standardized patient information."
+
+    columns:
+      - name: patient_id
+        description: "Unique identifier assigned to each patient."
+        data_type: varchar(20)
+        data_tests:
+          - not_null
+          - unique
+
+      - name: first_name
+        description: "Patient's first name."
+        data_type: varchar(200)
+
+      - name: last_name
+        description: "Patient's last name."
+        data_type: varchar(200)
+
+      - name: date_of_birth
+        description: "Patient's date of birth."
+        data_type: date
+
+      - name: phone
+        description: "Patient's contact phone number."
+        data_type: varchar(30)
+
+      - name: zip
+        description: "ZIP or postal code associated with the patient."
+        data_type: varchar(15)
+
+      - name: created_date
+        description: "Date on which the patient record was created."
+        data_type: date
+
+  - name: pub_dim_providers
+    description: "Publish-layer table containing cleaned provider information, including specialties, roles, effective dates, and locations."
+
+    columns:
+      - name: provider_id
+        description: "Identifier assigned to the healthcare provider. Multiple records may exist for a provider when role or effective-date history is maintained."
+        data_type: varchar(20)
+        data_tests:
+          - not_null
+
+      - name: npi
+        description: "National Provider Identifier assigned to the healthcare provider."
+        data_type: varchar(10)
+
+      - name: first_name
+        description: "Provider's first name."
+        data_type: varchar(200)
+
+      - name: last_name
+        description: "Provider's last name."
+        data_type: varchar(200)
+
+      - name: specialty
+        description: "Medical specialty of the provider."
+        data_type: varchar(100)
+
+      - name: role
+        description: "Provider's role within the healthcare organization."
+        data_type: varchar(50)
+
+      - name: effective_date
+        description: "Date from which the provider record becomes effective."
+        data_type: date
+
+      - name: location
+        description: "Clinic or location associated with the provider."
+        data_type: varchar(100)

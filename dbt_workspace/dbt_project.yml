@@ -35,3 +35,6 @@ models:
     transform:
       +materialized: table
       +schema: transform
+    publish:
+      +materialized: table
+      +schema: publish

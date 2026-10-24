@@ -32,8 +32,6 @@ models:
     columns:
       - name: provider_id
         data_type: varchar(20)
-        data_tests:
-          - not_null
 
       - name: npi
         data_type: varchar(10)
@@ -55,3 +53,44 @@ models:
 
       - name: location
         data_type: varchar(100)
+
+  - name: fact_referrals
+    description: "Transformed referral data with cleaned text fields and standardized dates."
+
+    columns:
+      - name: referral_id
+        data_type: varchar(20)
+
+      - name: patient_id
+        data_type: varchar(20)
+
+      - name: referring_provider_id
+        data_type: varchar(20)
+
+      - name: receiving_provider_id
+        data_type: varchar(20)
+
+      - name: referral_date
+        data_type: date
+
+  - name: fact_appointments
+    description: "Transformed appointment data with cleaned text fields and standardized date and timestamp values."
+
+    columns:
+      - name: appointment_id
+        data_type: varchar(20)
+
+      - name: patient_id
+        data_type: varchar(20)
+
+      - name: provider_id
+        data_type: varchar(20)
+
+      - name: appointment_date
+        data_type: date
+
+      - name: status
+        data_type: varchar(30)
+
+      - name: updated_at
+        data_type: timestamp
