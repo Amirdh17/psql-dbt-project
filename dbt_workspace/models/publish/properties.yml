@@ -14,10 +14,20 @@ models:
       - name: patient_id
         description: "Identifier of the patient associated with the appointment."
         data_type: varchar(20)
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('pub_dim_patients')
+                field: patient_id
 
       - name: provider_id
         description: "Identifier of the provider associated with the appointment."
         data_type: varchar(20)
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('pub_dim_providers')
+                field: provider_id
 
       - name: appointment_date
         description: "Date on which the appointment is scheduled."
@@ -56,14 +66,28 @@ models:
         data_type: varchar(20)
         data_tests:
           - not_null
+          - relationships:
+              arguments:
+                to: ref('pub_dim_patients')
+                field: patient_id
 
       - name: referring_provider_id
         description: "Identifier of the provider initiating the referral."
         data_type: varchar(20)
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('pub_dim_providers')
+                field: provider_id
 
       - name: receiving_provider_id
         description: "Identifier of the provider receiving the referral."
         data_type: varchar(20)
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('pub_dim_providers')
+                field: provider_id
 
       - name: referral_date
         description: "Date on which the referral was made."
