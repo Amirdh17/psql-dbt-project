@@ -7,20 +7,15 @@ WITH source AS (
         NULLIF(TRIM(status), '') AS status,
         NULLIF(TRIM(updated_at), '') AS updated_at
     FROM {{ source('source', 'appointments') }}
-),
-
-transformed AS (
-    SELECT DISTINCT
-        appointment_id,
-        patient_id,
-        provider_id,
-        {{ standardize_date('appointment_date') }} AS appointment_date,
-        status,
-        CAST(
-            NULLIF(updated_at, '') AS TIMESTAMP
-        ) AS updated_at
-    FROM source
 )
 
-SELECT *
-FROM transformed
+SELECT DISTINCT
+    appointment_id,
+    patient_id,
+    provider_id,
+    {{ standardize_date('appointment_date') }} AS appointment_date,
+    {{ standardize_app_status('status') }} AS status,
+    CAST(
+        NULLIF(updated_at, '') AS TIMESTAMP
+    ) AS updated_at
+FROM source

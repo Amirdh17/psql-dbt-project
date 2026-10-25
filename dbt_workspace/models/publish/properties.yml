@@ -26,6 +26,15 @@ models:
       - name: status
         description: "Current status of the appointment."
         data_type: varchar(30)
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - 'CANCELLED'
+                  - 'NO_SHOW'
+                  - 'COMPLETED'
+                  - 'SCHEDULED'
 
       - name: updated_at
         description: "Timestamp indicating when the appointment record was last updated."
