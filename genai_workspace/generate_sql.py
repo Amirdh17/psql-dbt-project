@@ -1,5 +1,3 @@
-import llm_model
-
 # Database schema provided to the LLM
 SCHEMA = """
 Table: publish.pub_dim_patients
@@ -85,10 +83,12 @@ Rules:
 3. Do not generate INSERT, UPDATE, DELETE, DROP, ALTER, or other
    data-modifying statements.
 4. Use appropriate JOIN, GROUP BY, date filtering, and aggregations.
-5. If user's question not relevent to the schema and tables, you should provide empty string.
-6. Avoid counting a referral multiple times when several appointments
+5. Use chat history, try to connect relevent information with current user question and genrate sql for needed data.
+6. If user's question not relevent to the schema, tables and chat history, you should provide empty string.
+7. Use chat history efficiently to generate sql.
+8. Avoid counting a referral multiple times when several appointments
    match it. Use EXISTS or COUNT(DISTINCT referral_id) as appropriate.
-7. Return only SQL, without Markdown or explanations.
+9. Return only SQL, without Markdown or explanations.
 
 User question:
 {question}
